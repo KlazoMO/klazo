@@ -1,0 +1,153 @@
+/* Основные стили для хедера */
+header {
+    display: flex;              /* Используем Flexbox для выравнивания элементов */
+    justify-content: space-between;  /* Размещаем элементы на противоположных концах */
+    align-items: center;        /* Центрируем по вертикали */
+    padding: 10px 20px;         /* Отступы */
+    background-color: #1e1e1e; /* Цвет фона хедера (можно изменить) */
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-style: sans-serif;
+}
+/* Стили для логотипа */
+header .logo img{
+    max-width: 40px;           /* Максимальная ширина логотипа */
+    height: auto;               /* Сохраняем пропорции изображения */
+    display: block;             /* Убираем пробелы вокруг изображения */
+    width:  40px;
+    height: 40px;
+    border-radius: 5px;
+}
+.store-name{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color .3s;
+    display: block;
+}
+header .store-name:hover{
+    color: cornflowerblue;
+}
+/* Стили для меню навигации */
+header nav ul {
+    list-style: none;           /* Убираем маркеры списка */
+    display: flex;              /* Размещаем пункты меню в ряд */
+    gap: 20px;                  /* Отступы между пунктами */
+}
+
+header nav ul li a {
+    color: #fff;                /* Белый цвет текста для ссылок */
+    text-decoration: none;      /* Убираем подчеркивание */
+    font-size: 16px;            /* Размер шрифта */
+    transition: color 0.3s;     /* Плавное изменение цвета */
+}
+
+header nav ul li a:hover {
+    color: #f39c12;             /* Цвет ссылки при наведении */
+}
+
+/* Медиазапрос для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;  /* Меню и логотип будут располагаться друг под другом */
+        align-items: center;     /* Центрируем элементы */
+    }
+    
+    header nav ul {
+        flex-direction: column;  /* Размещаем элементы меню вертикально */
+        align-items: center;     /* Центрируем меню */
+        gap: 10px;               /* Меньшие отступы между пунктами меню */
+    }
+    
+    header .logo img {
+        max-width: 120px;        /* Уменьшаем размер логотипа на мобильных */
+    }
+}
+
+/* Стили для основной части страницы */
+body {
+    font-family: Arial, sans-serif; /* Шрифт для всего сайта */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Цвет фона страницы */
+    color: #333; /* Цвет текста */
+}
+.logo img {
+    max-width: 100%; /* Логотип будет адаптивным */
+    margin: center; /* Центрирование логотипа */
+}
+/* Стили для контейнеров */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для главной страницы */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.main-content .item {
+    flex: 1 1 20%; /* Элементы будут располагаться в 4 колонки */
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.main-content .item:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+.main-content .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-links a:hover {
+    color: #f39c12;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #f39c12; /* Цвет кнопок */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: hwb(28 11% 56%); /* Цвет кнопки при наведении */
+} 
